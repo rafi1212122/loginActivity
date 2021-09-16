@@ -6,11 +6,11 @@
         <menu>
             <group>
                 <item
-                    android:id="@+id/st_bahasa"
+                    android:id="@+id/bahasa"
                     android:title="Bahasa"
                     />
                 <item
-                    android:id="@+id/st_tampilan"
+                    android:id="@+id/tampilan"
                     android:title="Tampilan"
                     />
             </group>

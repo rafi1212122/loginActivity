@@ -3,18 +3,17 @@ package com.rafi12.emptyactivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     private lateinit var dataEmail: Array<String>
     private lateinit var dataPass: Array<String>
+    private var progressBar: ProgressBar? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
         val editEmail:EditText = findViewById((R.id.mail_input))
         val editPassword:EditText = findViewById((R.id.pass_input))
@@ -25,10 +24,13 @@ class MainActivity : AppCompatActivity() {
         val showPass:CheckBox = findViewById(R.id.show_pass)
         val remember:CheckBox = findViewById(R.id.rember)
 
+        progressBar = findViewById(R.id.prog_bar)
+
         dataEmail= arrayOf("rafi1212122@outlook.com", "abdurachmanrafi394@gmail.com")
         dataPass = arrayOf("12345678", "1234567890")
 
         loginBtn.setOnClickListener {
+            progressBar?.visibility = View.VISIBLE
             auth(editEmail.text.toString(),editPassword.text.toString())
         }
 
@@ -50,5 +52,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+        progressBar?.visibility = View.GONE
     }
 }
