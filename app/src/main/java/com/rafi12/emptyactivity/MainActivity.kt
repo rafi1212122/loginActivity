@@ -1,5 +1,6 @@
 package com.rafi12.emptyactivity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -30,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         loginBtn.setOnClickListener {
             auth(editEmail.text.toString(),editPassword.text.toString())
         }
+
+        registerBtn.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
     }
 
     fun auth(email:String,password:String){
@@ -38,6 +43,8 @@ class MainActivity : AppCompatActivity() {
             val getPassData = dataPass.get(i)
             if (getEmailData == email && getPassData == password){
                 Toast.makeText(this, "Logged in", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, HomeActivity::class.java))
+                break
             }else{
                 Toast.makeText(this, "Salah", Toast.LENGTH_SHORT).show()
             }
