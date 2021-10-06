@@ -3,8 +3,12 @@ package com.rafi12.emptyactivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.InputType
+import android.view.Display
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
+import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var dataEmail: Array<String>
@@ -21,8 +25,10 @@ class LoginActivity : AppCompatActivity() {
         val loginBtn:Button = findViewById(R.id.login_btn)
         val registerBtn:Button = findViewById(R.id.reg_btn)
 
-        val showPass:CheckBox = findViewById(R.id.show_pass)
-        val remember:CheckBox = findViewById(R.id.rember)
+//        val builder = AlertDialog.Builder(this).create()
+//        builder?.setTitle("halo")
+//        builder?.setMessage("ini BUilder")
+//        builder?.show()
 
         progressBar = findViewById(R.id.prog_bar)
 
@@ -46,7 +52,6 @@ class LoginActivity : AppCompatActivity() {
             if (getEmailData == email && getPassData == password){
                 Toast.makeText(this, "Logged in", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, HomeActivity::class.java))
-                break
             }else{
                 Toast.makeText(this, "Salah", Toast.LENGTH_SHORT).show()
             }

@@ -53,6 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
+        app:passwordToggleEnabled="true"
         app:layout_constraintTop_toBottomOf="@+id/tl1"
         app:startIconDrawable="@drawable/ic_key">
         <androidx.appcompat.widget.AppCompatEditText
@@ -62,11 +63,6 @@
             android:hint="Password"
             android:inputType="textPassword"
             />
-        <CheckBox
-            android:id="@+id/show_pass"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Show password"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
