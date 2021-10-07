@@ -14,15 +14,17 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val dataGambar = arrayOf("https://images.tokopedia.net/img/cache/900/VqbcmM/2021/9/27/47fa325b-cf68-47ce-9e10-7b11755aaa3c.jpg",
-                                "https://images.tokopedia.net/img/cache/900/attachment/2018/10/8/153900654759468/153900654759468_6851d83f-8f1d-435b-9a0f-709ced84e7d9.png")
+        val dataGambar = arrayOf("https://cdn-icons-png.flaticon.com/512/149/149071.png",
+                                "https://cdn-icons-png.flaticon.com/512/149/149071.png")
 
-        val dataJudul = arrayOf("Hoodie Putih", "Digital Piano")
+        val dataJudul = arrayOf("PayPal", "Cashapp")
 
-        val dataSubjudul = arrayOf("45k+", "1k+")
+        val dataSubjudul = arrayOf("PayPal: Your security code is: 875393. It expires in 10 minutes. Don't share this code with anyone.", "Cash App: (201) 857-7757 has been unlinked from your Cash App account")
+
+        val dataTanggal = arrayOf("28 Sep", "27 Sep")
 
         val rvitem:RecyclerView = findViewById(R.id.rv_item)
-        rvitem.adapter = AdapterRecyclerView(this, dataGambar, dataJudul, dataSubjudul)
+        rvitem.adapter = AdapterRecyclerView(this, dataGambar, dataJudul, dataTanggal, dataSubjudul)
         rvitem.layoutManager = LinearLayoutManager(this)
         rvitem.setHasFixedSize(true)
     }

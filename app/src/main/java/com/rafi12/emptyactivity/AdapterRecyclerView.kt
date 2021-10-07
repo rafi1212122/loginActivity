@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 class AdapterRecyclerView(private val context:Context,
                           private val dataGambar: Array<String>,
                           private val dataJudul: Array<String>,
+                          private val dataTanggal:Array<String>,
                           private val dataSubjudul: Array<String>) :
     RecyclerView.Adapter<AdapterRecyclerView.ViewHolder>() {
 
@@ -19,6 +20,7 @@ class AdapterRecyclerView(private val context:Context,
         val bindGambar: ImageView = view.findViewById(R.id.img)
         val bindJudul: TextView = view.findViewById(R.id.judul)
         val bindSubjudul: TextView = view.findViewById(R.id.subjudul)
+        val bindTanggal: TextView = view.findViewById(R.id.date)
     }
 
     // Create new views (invoked by the layout manager)
@@ -42,6 +44,7 @@ class AdapterRecyclerView(private val context:Context,
             .into(viewHolder.bindGambar);
         viewHolder.bindJudul.text = dataJudul[position]
         viewHolder.bindSubjudul.text = dataSubjudul[position]
+        viewHolder.bindTanggal.text = dataTanggal[position]
     }
 
     // Return the size of your dataset (invoked by the layout manager)

@@ -1,28 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="20dp"
-    android:orientation="vertical">
+    android:padding="15dp">
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/ic_launcher_background"/>
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Judul" />
+
+        <TextView
+            android:id="@+id/subjudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Subjudul" />
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/judul"
+        android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="Judul"/>
-    <TextView
-        android:id="@+id/subjudul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Subjudul"/>
+        android:text="Date"/>
 
 </LinearLayout>
